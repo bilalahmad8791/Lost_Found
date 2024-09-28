@@ -1,0 +1,183 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #311179; /* Dark Purple */
+    --secondary-color: #fefeff; /* Light Pink */
+    --accent-color: #0e0e0e; /* Neon Blue */
+    --text-color: #fff;
+    --input-bg-color: #f8f6fd; /* Light Beige */
+    --label-color: #000; /* Black */
+    --font-family: 'Poppins', sans-serif;
+    --heading-font-family: 'Playfair Display', serif;
+    --max-width: 800px;
+    --transition-speed: 0.4s ease;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.7;
+    background-image: url('your-flower-image-url.jpg'); /* Replace with the actual image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    padding-bottom: 80px; /* Space for fixed footer */
+    min-height: 100vh;
+    letter-spacing: 0.5px;
+}
+
+/* Header Styles */
+header {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 1.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+    font-family: var(--heading-font-family);
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color var(--transition-speed);
+}
+
+header nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Section Styles */
+section {
+    margin: 2rem auto;
+    padding: 2.5rem;
+    max-width: var(--max-width);
+    background: #fff;
+    color: #333;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    transition: transform var(--transition-speed), background var(--transition-speed);
+}
+
+section:hover {
+    transform: translateY(-12px);
+    background: var(--secondary-color); /* Light Pink */
+    color: var(--text-color);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    font-family: var(--heading-font-family);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    font-size: 1.9rem;
+    color: var(--label-color); /* Black */
+}
+
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 0.85rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: var(--input-bg-color);
+    transition: border-color var(--transition-speed), background-color var(--transition-speed);
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: var(--accent-color);
+    background-color: #e8faff;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--text-color);
+    padding: 0.85rem 1.75rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: background var(--transition-speed);
+}
+button:hover {
+    background: var(--primary-color);
+}
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1.2rem;
+    background: var(--primary-color);
+    color: var(--text-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"], input[type="date"] {
+        padding: 0.7rem;
+    }
+
+    button {
+        padding: 0.6rem 1.2rem;
+    }
+}
